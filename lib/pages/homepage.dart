@@ -10,6 +10,10 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    final width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      backgroundColor: width > 600 ? Colors.deepPurple : Colors.blueAccent,
+      body: Center(child: Text(width.toString())),
+    );
   }
 }
